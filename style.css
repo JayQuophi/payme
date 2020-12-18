@@ -1,15 +1,16 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-body{
-    background: rgb(2,0,36) !important;
-    background: linear-gradient(95deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 48%, rgba(0,212,255,1) 100%) !important;
+
+body {
+    background: rgb(2, 0, 36) !important;
+    background: linear-gradient(95deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 48%, rgba(0, 212, 255, 1) 100%) !important;
     /* position: relative; */
     box-sizing: border-box;
 }
 
-.main{
+.main {
     width: 100%;
     height: 100vh;
     /* background-color: white; */
@@ -17,7 +18,7 @@ body{
 
 }
 
-.innermain{
+.innermain {
     background-color: white;
     width: 600px;
     height: 700px;
@@ -25,21 +26,23 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 20px ;
+    border-radius: 40px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5); */
 }
 
-.box{
+.box {
     /* background-color: white; */
     width: 100%;
     height: 100%;
-    position: relative ;
+    position: relative;
 
 }
 
-.form{
+.form {
     width: 70%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }

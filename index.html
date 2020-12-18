@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <div class="main">
-        <div class="innermain">
-            <div class="box">
+    <div class="main ">
+        <div class="innermain mt-5">
+            <div class="box ">
                 <div class="form">
-                    <div class="head h3 text-center my-5">
+                    <div class="head h3 text-center">
                         Pay Me Now
                     </div>
                     <form action="https://apimomoweb.trustpay.africa/visaonlyPaymentType.php" method="POST">
+                    <!-- <form id="myForm"> -->
                         <div class="form-group">
                             <label for="amount">Amount</label>
                             <!-- <input type="number" name="amount" class="form-control form-control-lg" placeholder="Enter A" required> -->
@@ -23,7 +24,7 @@
                                 <div class="input-group-prepend">
                                   <div class="input-group-text">$</div>
                                 </div>
-                                <input type="text" name="amount" class="form-control form-control-lg" id="amount" placeholder="Amount" required>
+                                <input type="text" name="x_amount" class="form-control form-control-lg" id="amount" placeholder="Amount" required>
                               </div>
                         </div>
                         <div class="form-group">
@@ -41,20 +42,30 @@
 
                         <!-- <<input type="hidden" name="x_tran_key" value="2a2912068c45" class="form-control" > -->
 
+                        <?php
+
+                            $amount = $_POST['amount'];
+
+                            $amount = $amount * 5.8;
+
+                            echo $amount;
+                            exit;
+
+                        ?>
                         <input type="hidden" name="x_login" value="b60b3dd3c02307359c11306640f550" >
-                        <input type="hidden" name="x_amount" value="amount".*5.8 >
+                        <!-- <input type="hidden" name="x_amount" value="20" > -->
                         <input type="hidden" name="x_tran_key" value="1d229665ac60"  >
                         <input type="hidden" name="x_relay_url" value="https://selasie.com" >
                         <input type="hidden" name="x_cust_id" value="from_quophi"  >
                         <!-- <input type="hidden" name="x_email" value="justin@ghana.com" > -->
-                        <input type="hidden" name="x_phone" value="0557892855"  >
+                        <!-- <input type="hidden" name="x_phone" value="0557892855"  > -->
                         <input type="hidden" name="x_type" value="JustTest"  >
                         <input type="hidden" name="x_description" value="Justin Test" >
                         <input type="hidden" name="x_first_name" value="Justin" >
                         <input type="hidden" name="x_last_name" value="Agbadokude" >
                         <input type="hidden" name="x_checksum" value="xyz"  > 
                         <input type="hidden" name="code" value="justtest" > 
-                        <input type="hidden" name="cancel_url" value="https://selasie.com" class="form-control" > 
+                        <input type="hidden" name="cancel_url" value="https://ghana.com" class="form-control" > 
                         <input type="hidden" name="invoiceID" value="Invoice" class="form-control" > 
         
                         <div class="form-group">
@@ -67,11 +78,30 @@
         </div>
     </div>
     
+<!-- 
+    <script>
+        const myForm = document.getElementById("myForm");
 
-    <!-- <div class="main">
-        <div class="innermain">
+        myForm.addEventListener("submit", (e) => {
+            e.preventDefault();
 
-        </div>
-    </div> -->
+            const request = new XMLHttpRequest();
+
+            // request.open("POST", "https://apimomoweb.trustpay.africa/visaonlyPaymentType.php");
+            request.open("POST", "https://apimomoweb.trustpay.africa/visaonlyPaymentType.php");
+            request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+            // request.onload = function () {
+            //     console.log(request.responseText);
+            // }
+
+            request.send(new FormData(myForm));
+
+            // console.log('Form has been submitted')
+        });
+
+
+
+    </script> -->
 </body>
 </html>
